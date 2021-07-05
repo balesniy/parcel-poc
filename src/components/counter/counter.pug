@@ -1,0 +1,8 @@
+mixin counter(label, initial=0)
+    .counter
+        label.counter__label= label
+        .counter__btns-wrapper
+            button.counter__btn(data-type='decrement') -
+            span.counter__value= initial
+            input.counter__input(value=initial, name=label)
+            button.counter__btn(data-type='increment') +

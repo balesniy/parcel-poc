@@ -1,0 +1,33 @@
+.checkbox
+  padding-left: 30px
+  display: flex
+  align-items: center
+
+  font-family: Montserrat, sans-serif
+  font-style: normal
+  font-weight: normal
+  font-size: 14px
+  line-height: 18px
+
+  /* Dark 50% */
+  color: rgba(31, 32, 65, 0.5)
+
+  &__input
+    position: absolute
+    appearance: none
+
+  &__box
+    position: absolute
+    margin-left: -30px
+    width: 20px
+    height: 20px
+    overflow: hidden
+    border-radius: 4px
+    background-repeat: no-repeat
+    background-position: 50% 50%
+    border: 1px solid rgba(31, 32, 65, 0.25)
+
+  &__input:checked + &__box
+    border: 1px solid #bc9cff
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 4.3l4.2 4.2L4.3 10 0 5.7l1.4-1.4z' fill='url(%23paint0_linear)'/%3E%3Cpath d='M8.5 2.9L10 4.3 4.3 9.9 2.9 8.5 8.5 3z' fill='url(%23paint1_linear)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='7.8' y1='2.2' x2='2.2' y2='7.8' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23BC9CFF'/%3E%3Cstop offset='1' stop-color='%238BA4F9'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear' x1='7.8' y1='2.2' x2='2.2' y2='7.8' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23BC9CFF'/%3E%3Cstop offset='1' stop-color='%238BA4F9'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E")
+

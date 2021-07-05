@@ -1,0 +1,35 @@
+extends ./layout
+
+include components/counter/counter
+include components/text-field/text-field
+include components/dropdown/dropdown
+include components/checkbox/checkbox
+include components/radio/radio
+include components/toggle/toggle
+include components/rating/rating
+
+block title
+    | index page
+
+block main
+    +text-field('Text Field', 'Email', 'Default')
+    +text-field('Text Field', 'Some text', 'Hover / Focus')(value='This is pretty awesome')
+    +dropdown('dropdown')
+        +counter('Спальни', 2)
+        +counter('кровати', 2)
+        +counter('ванные комнаты', 0)
+    +checkbox('Завтрак')
+    +checkbox('Письменный стол', true)
+
+    .sex
+        +radio('Мужчина', 'sex', true)
+        +radio('Женщина', 'sex')
+    +toggle('Получать спецпредложения', 'accept')
+    +rating('rate button', 4)
+    +rating(null, 5, 'name', 10)
+
+    .container
+        +counter('Спальни', 2)
+        +counter('Ванные комнаты', 1)
+        .dummy
+            | lorem ipsum

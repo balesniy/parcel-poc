@@ -1,0 +1,66 @@
+.rating
+  $on: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' width='24'%3E%3Cpath d='M0 0h24v24H0V0z' fill='none'/%3E%3Cpath d='M12 17.3l6.2 3.7-1.7-7L22 9.2l-7.2-.6L12 2 9.2 8.6 2 9.2 7.5 14l-1.7 7 6.2-3.7z'/%3E%3C/svg%3E")
+  $off: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' width='24'%3E%3Cpath d='M0 0h24v24H0V0z' fill='none'/%3E%3Cpath d='M22 9.2l-7.2-.6L12 2 9.2 8.6 2 9.2 7.5 14l-1.7 7 6.2-3.7 6.2 3.7-1.6-7L22 9.2zm-10 6.2l-3.8 2.3 1-4.3L6 10.5l4.4-.4 1.7-4 1.7 4 4.4.4-3.3 2.9 1 4.3-3.8-2.3z'/%3E%3C/svg%3E")
+
+
+  margin: 0
+  padding: 0
+  border: none
+
+  &__caption
+    margin-bottom: 16px
+    padding: 0
+    text-transform: uppercase
+    font-family: Montserrat, sans-serif
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    line-height: 15px
+
+
+    /* Dark 100% */
+    color: #1F2041
+
+
+  &__group
+    position: relative
+    height: 24px
+    width: calc(var(--count) * 24px)
+
+    &:focus-within
+      outline: solid 2px #f51
+
+
+
+  &__star
+    appearance: none
+    position: absolute
+    font-size: inherit
+    width: 24px
+    height: 24px
+    top: 0
+    left: 0
+    margin: 0
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%) repeat-x
+
+    mask-image: $off
+
+    &:focus
+      outline: none
+
+
+    &:checked, &:hover
+      mask-image: $on
+
+
+    &:hover ~ &
+      mask-image: $off
+
+
+
+  @for $i from 1 through 10
+    &__star:nth-of-type(#{$i})
+      z-index: 10 - ($i - 1)
+      width: $i * 24px
+
+

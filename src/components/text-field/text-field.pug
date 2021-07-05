@@ -1,0 +1,6 @@
+mixin text-field(label, placeholder, status)
+    .text-field
+        label.text-field__label= label
+            if status
+                span.text-field__bage= status
+        input.text-field__input(placeholder=placeholder value=attributes.value)

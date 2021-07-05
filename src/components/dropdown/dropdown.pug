@@ -1,0 +1,11 @@
+mixin dropdown(label, status)
+    .dropdown
+        label.dropdown__label= label
+            if status
+                span.dropdown__bage= status
+        button.dropdown__select my button
+        .dropdown__content
+            if block
+                block
+            else
+                p No content provided

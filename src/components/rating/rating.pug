@@ -1,0 +1,9 @@
+mixin rating(label, rating=0, name=label, count=5)
+    - let i = count
+    fieldset.rating
+        if label
+            legend.rating__caption= label
+        .rating__group(style={'--count': count})
+            while i > 0
+                - let value = count - --i
+                input(type='radio' name=name checked= rating===value value=value).rating__star
