@@ -1,0 +1,41 @@
+.button
+  padding: 0
+  border: none
+  background: none
+  font-family: Montserrat, sans-serif
+  font-style: normal
+  font-weight: bold
+  font-size: 12px
+  line-height: 15px
+  text-transform: uppercase
+  border-radius: 22px
+  justify-self: left
+  /* Primary Color */
+  color: #BC9CFF
+
+  &--link
+    text-decoration: none
+    &:hover
+      color: rgba(31, 32, 65, 0.5)
+
+  &--primary
+    padding: 14px 19px
+    color: #FFFFFF
+    /* Primary Gradient */
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+
+    &:hover
+      opacity: 0.5
+
+  &--default
+    padding: 12px 17px
+    border: solid 2px transparent
+    background-origin: border-box
+    background-clip: padding-box, border-box
+    background-size: cover
+    background-image: linear-gradient(#fff, #fff), linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+    /* Primary Color */
+    color: #BC9CFF
+    &:hover
+      background-image: linear-gradient(#fff, #fff), linear-gradient(180deg, transparentize(#BC9CFF, 0.5) 0%, transparentize(#8BA4F9, 0.5) 100%)
+
