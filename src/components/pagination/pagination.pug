@@ -1,0 +1,13 @@
+mixin pagination(label, status)
+    .pagination
+        label.pagination__label= label
+            if status
+                span.pagination__bage= status
+        ul.pagination__pages
+            li.pagination__item.pagination__item--current= 1
+            li.pagination__item= 2
+            li.pagination__item= 3
+            li.pagination__item= '...'
+            li.pagination__item= 15
+            li.pagination__item.pagination__item--next
+        p.pagination__info= '1 – 12 из 100+ вариантов аренды'

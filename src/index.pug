@@ -8,6 +8,7 @@ include components/radio/radio
 include components/toggle/toggle
 include components/rating/rating
 include components/range/range
+include components/pagination/pagination
 
 block title
     | index page
@@ -20,6 +21,7 @@ block main
         +counter('кровати', 2)
         +counter('ванные комнаты', 0)
     +range('Range Slider', '5 000₽ - 10 000₽')
+    +pagination('pagination')
     +checkbox('Завтрак')
     +checkbox('Письменный стол', true)
 
