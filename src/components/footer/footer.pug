@@ -1,3 +1,5 @@
+include ../subscribe-field/subscribe-field
+
 mixin footer
     .footer
         img.footer__logo(src='components/footer/logo.svg' width=106 height=40)
@@ -38,7 +40,10 @@ mixin footer
             h3.footer__form-title Подписка
             p.footer__form-info
                 | Получайте специальные предложения и новости сервиса
-            input(type='email', placeholder='Email')
+            label.footer__field-wrapper
+                input.footer__form-field(type='email', placeholder='Email')
+                button.footer__form-btn
+            +subscribe-field(placeholder='e-mail')
 
         p.footer__copyright
             | Copyright © 2018 Toxin отель. Все права защищены.

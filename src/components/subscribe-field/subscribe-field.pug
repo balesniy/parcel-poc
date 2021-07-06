@@ -1,0 +1,7 @@
+mixin subscribe-field(label, status)
+    .subscribe-field
+        label.subscribe-field__label= label
+            if status
+                span.subscribe-field__bage= status
+        input.subscribe-field__input(type="email")&attributes(attributes)
+        button.subscribe-field__btn
