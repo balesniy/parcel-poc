@@ -1,0 +1,7 @@
+mixin range(label, status)
+    .range
+        label.range__label= label
+            if status
+                span.range__bage= status
+        .range__bar
+            .range__selected-bar

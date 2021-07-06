@@ -1,0 +1,43 @@
+@use '../../mixins'
+
+.range
+  +mixins.field-label
+
+  position: relative
+
+  background-color: #fff
+  height: 50px
+
+  &__bar
+    position: absolute
+    bottom: 5px
+    height: 6px
+    width: 100%
+    background: #FFFFFF
+    /* Dark 25% */
+    border: 1px solid rgba(31, 32, 65, 0.25)
+    border-radius: 3px
+  &__selected-bar
+    position: absolute
+    top: -1px
+    bottom: -1px
+    right: 30%
+    left: 10%
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%)
+    border-radius: 3px
+    &::before, &::after
+      position: absolute
+      content: ''
+      width: 16px
+      height: 16px
+
+      top: -5px
+
+      /* Secondary Gradient */
+      background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%)
+      border: 2px solid #FFFFFF
+      border-radius: 10px
+    &::before
+      left: -8px
+    &::after
+      right: -8px
