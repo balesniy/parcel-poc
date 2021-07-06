@@ -11,7 +11,7 @@ $(() => {
         console.log("changed on container")
     });
     $("<button>reset</button>")
-        .appendTo("body")
+        .appendTo(".container")
         .on("click", () => {
             // $(".counter").counter("reset")
             $(".container")

@@ -1,0 +1,102 @@
+.footer
+  display: grid
+  gap: 0 40px
+  grid-template-columns: repeat(12, 1fr)
+  grid-template-rows: repeat(3, auto)
+
+  max-width: 1440px
+  padding: 100px 140px 0
+  margin: 0 auto
+
+
+  &__logo
+    grid-column: span 3
+    grid-row: 1/2
+
+  &__info
+    grid-column: span 3
+    grid-row: 2/3
+
+    font-size: 14px
+    line-height: 24px
+    margin: 20px 0
+
+    /* Dark 75% */
+    color: rgba(31, 32, 65, 0.75)
+
+  &__menu
+    display: contents
+    list-style: none
+    margin: 0
+    padding: 0
+
+  &__menu-item
+    grid-row: span 2
+    grid-column: span 2
+
+  &__form
+    grid-column: span 3
+    grid-row: span 2
+    &-title
+      text-transform: uppercase
+      font-weight: bold
+      font-size: 12px
+      line-height: 15px
+      /* Dark 100% */
+      color: #1F2041
+
+
+  &__menu-title
+    text-transform: uppercase
+    font-weight: bold
+    font-size: 12px
+    line-height: 15px
+    /* Dark 100% */
+    color: #1F2041
+    margin-top: 0
+    margin-bottom: 20px
+
+  &__menu-list
+    list-style: none
+    margin: 0
+    padding: 0
+
+    display: grid
+    gap: 20px
+
+  &__menu-link
+    font-style: normal
+    text-decoration: none
+    font-weight: normal
+    font-size: 14px
+    line-height: 17px
+
+    /* Dark 50% */
+    color: rgba(31, 32, 65, 0.5)
+
+  &__copyright
+    grid-column: span 5
+    grid-row: -2/-1
+
+  &__social
+    grid-column: span 3 / -1
+    grid-row: -2/-1
+    justify-self: end
+    align-self: center
+
+    display: flex
+    gap: 20px
+    list-style: none
+    padding: 0
+    margin: 0
+
+.footer__social-link
+  display: block
+  width: 24px
+  height: 24px
+  &--tw
+    background: no-repeat center url("/src/components/footer/tw-icon.svg")
+  &--fb
+      background: no-repeat center url("/src/components/footer/fb-icon.svg")
+  &--ig
+      background: no-repeat center url("/src/components/footer/ig-icon.svg")

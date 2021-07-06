@@ -11,6 +11,7 @@ include components/range/range
 include components/pagination/pagination
 include components/button/button
 include components/nav-bar/nav-bar
+include components/footer/footer
 
 block title
     | index page
@@ -46,3 +47,7 @@ block main
         +counter('Ванные комнаты', 1)
         .dummy
             | lorem ipsum
+
+block footer
+    +footer
+
