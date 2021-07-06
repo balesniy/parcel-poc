@@ -10,9 +10,14 @@ include components/rating/rating
 include components/range/range
 include components/pagination/pagination
 include components/button/button
+include components/nav-bar/nav-bar
 
 block title
     | index page
+
+block header
+    +nav-bar
+    +nav-bar('Юлий Цезарь')
 
 block main
     +text-field('Text Field', 'Email', 'Default')

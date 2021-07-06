@@ -1,0 +1,20 @@
+mixin nav-bar(user)
+    .nav-bar
+        img.nav-bar__logo(src='components/nav-bar/logo.svg' width=106 height=40)
+        nav.nav-bar__navigation
+            ul.nav-bar__menu
+                li.nav-bar__menu-item.nav-bar__menu-item--active О нас
+                li.nav-bar__menu-item.nav-bar__menu-item--expandable Услуги
+                li.nav-bar__menu-item Вакансии
+                li.nav-bar__menu-item Новости
+                li.nav-bar__menu-item.nav-bar__menu-item--expandable Соглашения
+            if(user)
+                .nav-bar__user= user
+            else
+                ul.nav-bar__user-menu
+                    li.nav-bar__user-menu-item
+                        button.button.button--default войти
+                    li.nav-bar__user-menu-item
+                        button.button.button--primary зарегистрироваться
+
+
