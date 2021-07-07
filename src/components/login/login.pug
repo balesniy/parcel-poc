@@ -1,0 +1,15 @@
+include ../text-field/text-field
+include ../button/button
+
+
+mixin login
+    section.login
+        h2.login__title Войти
+        form.login__form
+            +text-field(null, 'Email')
+            +text-field(null, 'Пароль')
+            .login__submit-wrapper
+                +button('Войти', 'wide')
+            p.login__sign-up-wrapper
+                | Нет аккаунта на Toxin?
+                +button('создать', 'default')

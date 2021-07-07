@@ -14,6 +14,7 @@ include components/nav-bar/nav-bar
 include components/footer/footer
 include components/rooms-search/rooms-search
 include components/sign-up/sign-up
+include components/login/login
 
 block title
     | index page
@@ -25,6 +26,7 @@ block header
 block main
     +rooms-search
     +sign-up
+    +login
     +text-field('Text Field', 'Email', 'Default')
     +text-field('Text Field', 'Some text', 'Hover / Focus')(value='This is pretty awesome')
     +dropdown('Сколько гостей', 'dropdown')
