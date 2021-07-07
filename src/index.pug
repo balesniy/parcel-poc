@@ -12,6 +12,7 @@ include components/pagination/pagination
 include components/button/button
 include components/nav-bar/nav-bar
 include components/footer/footer
+include components/rooms-search/rooms-search
 
 block title
     | index page
@@ -21,9 +22,10 @@ block header
     +nav-bar('Юлий Цезарь')
 
 block main
+    +rooms-search
     +text-field('Text Field', 'Email', 'Default')
     +text-field('Text Field', 'Some text', 'Hover / Focus')(value='This is pretty awesome')
-    +dropdown('dropdown')
+    +dropdown('Сколько гостей', 'dropdown')
         +counter('Спальни', 2)
         +counter('кровати', 2)
         +counter('ванные комнаты', 0)

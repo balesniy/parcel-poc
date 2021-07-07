@@ -1,9 +1,9 @@
-mixin dropdown(label, status)
+mixin dropdown(value, label, status)
     .dropdown
         label.dropdown__label= label
             if status
                 span.dropdown__bage= status
-        button.dropdown__select my button
+        button.dropdown__select(type='button')= value
         .dropdown__content
             if block
                 block
