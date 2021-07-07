@@ -1,0 +1,21 @@
+include ../text-field/text-field
+include ../radio/radio
+include ../button/button
+
+mixin sign-up
+    section.sign-up
+        h2.sign-up__title Регистрация аккаунта
+        form.sign-up__form
+            +text-field(null, 'Имя')
+            +text-field(null, 'Фамилия')
+            .sign-up__radio-wrapper
+                +radio('Мужчина', 'sex', true)
+                +radio('Женщина', 'sex')
+            +text-field('дата рождения', 'ДД.ММ.ГГГГ')
+            +text-field('данные для входа в сервис', 'Email')
+            +text-field(null, 'Пароль')
+            +toggle('Получать спецпредложения', 'subscribe', false)
+            +button('перейти к оплате', 'wide')
+            p.sign-up__login-wrapper
+                | Уже есть аккаунт на Toxin
+                +button('войти', 'default')
